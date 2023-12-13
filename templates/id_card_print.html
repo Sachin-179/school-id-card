@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Cards</title>
+    <style>
+        /* Add styles for the ID card here */
+        /* Example styles for 8.5 x 5.5 inches */
+        body {
+            width: 8.5in;
+            height: 5.5in;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    {% for student in students %}
+        <div>
+            <h1>{{ student.name }}</h1>
+            <p>Father Name: {{ student.father_name }}</p>
+            <!-- Add more fields as needed -->
+            <img src="{{ student.photo }}" style="max-width: 50px; max-height: 50px;">
+        </div>
+        <!-- Add more styling and fields as needed -->
+    {% endfor %}
+</body>
+</html>
